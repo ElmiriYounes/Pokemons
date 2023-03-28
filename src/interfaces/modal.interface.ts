@@ -3,5 +3,4 @@ export interface IModal {
   setOpenModal: (open: boolean) => void;
   pokemon: any;
   setPokemon: (pokemon: any) => void;
-  offsetTop?: number;
 }

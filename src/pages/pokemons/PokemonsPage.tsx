@@ -56,8 +56,6 @@ const PokemonsPage: FC = () => {
 
   const [openModal, setOpenModal] = useState<boolean>(false);
 
-  const [offsetTop, setOffsetTop] = useState<number>(0);
-
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   const [page, setPage] = useState<number>(1);
@@ -74,6 +72,10 @@ const PokemonsPage: FC = () => {
   const md: boolean = useMediaQuery(mdMediaQuery);
 
   const pokemonsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const handleScroll = (): void => {
@@ -94,10 +96,6 @@ const PokemonsPage: FC = () => {
       document.body.style.overflow = "unset";
     };
   }, [data]);
-
-  useEffect(() => {
-    openModal && setOffsetTop(window.scrollY);
-  }, [openModal]);
 
   const handleChange = (
     event: React.ChangeEvent<unknown> | undefined,
@@ -217,7 +215,6 @@ const PokemonsPage: FC = () => {
           setOpenModal={setOpenModal}
           pokemon={pokemon}
           setPokemon={setPokemon}
-          offsetTop={offsetTop}
         />
       )}
 

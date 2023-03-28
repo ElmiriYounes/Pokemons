@@ -1,11 +1,4 @@
-import React, {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import {
   variantHamburgerClose,
   variantModal,
@@ -31,11 +24,9 @@ import { Theme, useTheme, useMediaQuery, Typography } from "@mui/material";
 import { typesPokemon } from "src/datas/pokemons";
 import CountUp from "react-countup";
 import { xsMediaQuery } from "src/responsive/responsive";
-import { Waypoint } from "react-waypoint";
-import Aos from "aos";
 import { circularValues } from "src/datas/circular";
 
-const Modal: FC<IModal> = ({ opened, setOpenModal, pokemon, offsetTop }) => {
+const Modal: FC<IModal> = ({ opened, setOpenModal, pokemon }) => {
   const [toggled, setToggled] = useState<boolean>(false);
 
   const [scrolling, setScrolling] = useState<boolean>(false);
@@ -62,12 +53,10 @@ const Modal: FC<IModal> = ({ opened, setOpenModal, pokemon, offsetTop }) => {
 
   useEffect(() => {
     let timer: NodeJS.Timeout | null = null;
-    let timer2: NodeJS.Timeout | null = null;
 
     modalRef.current!.scrollTop = 0;
     if (opened) {
       timer = setTimeout(() => {
-        document.body.style.overflow = "hidden";
         circularRef.current!.offsetTop +
           (window.innerWidth < 600 ? 84 : 64) -
           window.innerHeight <
@@ -79,12 +68,10 @@ const Modal: FC<IModal> = ({ opened, setOpenModal, pokemon, offsetTop }) => {
       }, 1000);
     } else {
       modalRef.current?.removeEventListener("scroll", handleScroll);
-      document.body.style.overflow = "unset";
       setToggled(false);
       setProgress(0);
       setScrolling(false);
       clearTimeout(timer!);
-      window.scrollTo(0, offsetTop!);
     }
 
     return () => {
@@ -107,24 +94,23 @@ const Modal: FC<IModal> = ({ opened, setOpenModal, pokemon, offsetTop }) => {
       }}
       ref={modalRef}
     >
-      <HamburgerClose
-        variants={variantHamburgerClose}
-        initial={"hidden"}
-        animate={toggled ? "show" : "hidden"}
-      >
-        <Hamburger
-          toggled={toggled}
-          toggle={handleToggle}
-          color={
-            theme.palette.mode === "light"
-              ? theme.palette.primary.main
-              : "white"
-          }
-        />
-      </HamburgerClose>
-
       {pokemon && (
         <PokemonWrapper container>
+          <HamburgerClose
+            variants={variantHamburgerClose}
+            initial={"hidden"}
+            animate={toggled ? "show" : "hidden"}
+          >
+            <Hamburger
+              toggled={toggled}
+              toggle={handleToggle}
+              color={
+                theme.palette.mode === "light"
+                  ? theme.palette.primary.main
+                  : "white"
+              }
+            />
+          </HamburgerClose>
           <GridWrap item xs={12}>
             <Typography variant="h4" marginBottom={"50px"}>
               {pokemon.name}

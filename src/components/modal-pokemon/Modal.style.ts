@@ -96,6 +96,7 @@ export const GridWrap = styled(Grid)`
 export const PokemonWrapper = styled(Grid)`
   margin: calc(20px + 48px + 20px) auto 0 auto;
   max-width: ${`${maxWidth}px`};
+  position: relative;
 
   @media (max-width: 599px) {
     margin: calc(20px + 0px + 20px) auto 0 auto;
@@ -104,17 +105,23 @@ export const PokemonWrapper = styled(Grid)`
 
 export const HamburgerClose = motion(styled(Box)`
   position: absolute;
-  top: 20px;
+  top: calc(-48px - 20px);
   left: 20px;
 `);
 
 export const ModalPokemon = motion(styled(Box)`
   background-color: ${(props) =>
     (props.theme as Theme).palette.background.default};
-  width: 100%;
+  top: 63px;
   left: 0;
+  right: 0;
+  bottom: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   overflow: auto;
   padding: 50px 0;
+
+  @media (max-width: 599px) {
+    top: 84px;
+  }
 `);
