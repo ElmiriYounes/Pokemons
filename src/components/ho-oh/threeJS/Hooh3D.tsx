@@ -9,11 +9,12 @@ title: my animated ho-oh
 import React, { useEffect, useRef, FC } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { AnimationClip, Material, Mesh, Object3D } from "three";
+import { pathname } from "src/datas/navbar";
 
 export const Hooh3D: FC = (props: any) => {
   const group = useRef<Mesh>(null!);
 
-  const { nodes, materials, animations }: any = useGLTF("/hooh.glb");
+  const { nodes, materials, animations }: any = useGLTF(`${pathname}hooh.glb`);
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {

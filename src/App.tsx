@@ -10,6 +10,7 @@ import { darkTheme } from "./themes/darkTheme";
 import { lightTheme } from "./themes/lightTheme";
 import PokemonsPage from "./pages/pokemons/PokemonsPage";
 import PageNotFound from "./components/errors/PageNotFound";
+import { pathname } from "src/datas/navbar";
 
 const App: FC = () => {
   const [mode, setMode] = useState<string>("light");
@@ -33,8 +34,8 @@ const App: FC = () => {
         <Navbar toggleMode={toggleMode} />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/pokemons" element={<PokemonsPage />} />
+          <Route path={pathname} element={<HomePage />} />
+          <Route path={`${pathname}pokemons`} element={<PokemonsPage />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>

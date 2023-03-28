@@ -4,6 +4,7 @@ import Button from "../button/Button";
 import { useMediaQuery } from "@mui/material";
 import { Desc, JumbotronWrap, Title } from "./Jumbotron.styles";
 import { Link } from "react-router-dom";
+import { pathname } from "src/datas/navbar";
 
 const Jumbotron: FC = () => {
   const xs: boolean = useMediaQuery(xsMediaQuery);
@@ -22,7 +23,7 @@ const Jumbotron: FC = () => {
         This is a website using React and GraphQL to show the basic pokemons.
       </Desc>
 
-      <Link to="/pokemons">
+      <Link to={`${pathname}pokemons`}>
         <Button sx={{ margin: lg ? "unset" : "0 auto" }}>Get Started</Button>
       </Link>
     </JumbotronWrap>
