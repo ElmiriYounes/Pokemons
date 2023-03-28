@@ -96,6 +96,10 @@ export const GridWrap = styled(Grid)`
 export const PokemonWrapper = styled(Grid)`
   margin: calc(20px + 48px + 20px) auto 0 auto;
   max-width: ${`${maxWidth}px`};
+
+  @media (max-width: 599px) {
+    margin: calc(20px + 0px + 20px) auto 0 auto;
+  }
 `;
 
 export const HamburgerClose = motion(styled(Box)`

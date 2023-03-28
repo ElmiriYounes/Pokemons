@@ -91,6 +91,7 @@ const PokemonsPage: FC = () => {
     return () => {
       setPokemons(undefined);
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "unset";
     };
   }, [data]);
 

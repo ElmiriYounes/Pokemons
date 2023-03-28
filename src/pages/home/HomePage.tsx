@@ -9,6 +9,10 @@ import CurvesLines from "../../components/background-svg-curves/CurvesLines";
 const HomePage = () => {
   const lg: boolean = useMediaQuery(lgMediaQuery);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Hero lg={String(lg)}>
       <CurvesLines />

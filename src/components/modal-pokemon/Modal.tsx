@@ -62,10 +62,11 @@ const Modal: FC<IModal> = ({ opened, setOpenModal, pokemon, offsetTop }) => {
 
   useEffect(() => {
     let timer: NodeJS.Timeout | null = null;
+    let timer2: NodeJS.Timeout | null = null;
 
     modalRef.current!.scrollTop = 0;
     if (opened) {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         document.body.style.overflow = "hidden";
         circularRef.current!.offsetTop +
           (window.innerWidth < 600 ? 84 : 64) -
@@ -85,6 +86,10 @@ const Modal: FC<IModal> = ({ opened, setOpenModal, pokemon, offsetTop }) => {
       clearTimeout(timer!);
       window.scrollTo(0, offsetTop!);
     }
+
+    return () => {
+      modalRef.current?.removeEventListener("scroll", handleScroll);
+    };
   }, [opened]);
 
   const handleToggle = () => {
