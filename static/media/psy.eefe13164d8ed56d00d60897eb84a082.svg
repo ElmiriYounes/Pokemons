@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5" clipRule="evenodd" viewBox="0 0 280 300">
+    <g>
+        <ellipse cx="125.039" cy="210.58" fill="#fff" rx="52.76" ry="30.231" transform="matrix(1.15545 0 0 1.65393 -4.476 -48.283)"></ellipse>
+        <ellipse cx="181.072" cy="119.343" fill="none" stroke="#fff" strokeWidth="5.67" rx="61.425" ry="54.878" transform="matrix(1.29467 0 0 1.17193 -94.428 156.351)"></ellipse>
+        <ellipse cx="181.072" cy="119.343" fill="none" stroke="#fff" strokeWidth="4.68" rx="61.425" ry="54.878" transform="matrix(1.59875 0 0 1.38246 -149.488 119.673)"></ellipse>
+        <ellipse cx="181.072" cy="119.343" fill="none" stroke="#fff" strokeWidth="4.07" rx="61.425" ry="54.878" transform="matrix(1.88088 0 0 1.54035 -200.574 92.164)"></ellipse>
+        <ellipse cx="181.072" cy="119.343" fill="none" stroke="#fff" strokeWidth="3.49" rx="61.425" ry="54.878" transform="matrix(2.24462 0 0 1.73333 -264.313 58.542)"></ellipse>
+    </g>
+</svg>
