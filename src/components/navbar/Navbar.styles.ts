@@ -1,11 +1,13 @@
 import { styled } from "@mui/system";
 import { AppBar, Box, IconButton, Switch, Button } from "@mui/material";
 import { IHamburger, INavMediaQuery } from "../../interfaces/navbar.interfaces";
-import { flexCenter } from "../../globalStyle";
+import { flexCenter, maxWidth } from "../../globalStyle";
 
 export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
+  position: "relative",
+  zIndex: 9999,
   padding: 7,
   "& .MuiSwitch-switchBase": {
     margin: 1,
@@ -86,7 +88,7 @@ export const Papper = styled(Box)({
 
 export const DrawerWrap = styled(Box)<INavMediaQuery>((props) => ({
   position: "fixed",
-  zIndex: "9998",
+  zIndex: "999",
   top: "0",
   left: "0",
   right: "0",
@@ -109,8 +111,14 @@ export const OnDesktop = styled(Box)<INavMediaQuery>((props) => ({
   display: props.xs === "true" ? "none" : "block",
 }));
 
-export const Nav = styled(AppBar)<INavMediaQuery>((props) => ({
+export const Nav = styled(AppBar)<INavMediaQuery>((props) => ({}));
+
+export const NavWrapper = styled(Box)<INavMediaQuery>((props) => ({
+  display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
   padding: props.xs === "true" ? "0 16px" : "10px 16px",
+  maxWidth: `calc(${maxWidth}px + 200px)`,
+  width: "100%",
+  margin: "0 auto",
 }));

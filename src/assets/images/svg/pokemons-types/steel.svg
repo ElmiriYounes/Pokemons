@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2" clipRule="evenodd" viewBox="0 0 280 300">
+    <g transform="translate(140 268.889) scale(.62222)">
+        <g transform="translate(-225 -50)">
+            <clipPath id="_clip1">
+                <path d="M0 0H450V100H0z"></path>
+            </clipPath>
+            <g clipPath="url(#_clip1)">
+                <g fillRule="nonzero" transform="translate(-34.848 -104.58)">
+                    <path fill="#CCC" d="M36.279 175.58h21.072l-1.743 6.53-19.329-6.53z"></path>
+                    <path fill="#EEE" d="M80.022 189.25l398.48-.41-1.4 15.2-392.28.48-4.798-15.27h-.002z"></path>
+                    <path fill="url(#_Linear2)" d="M72.196 128.85l392.84-.46-5.05 55.19-395.06.79 7.266-55.52h.004z"></path>
+                    <path fill="#CCC" d="M72.196 128.85l392.84-.46-5.05 55.19-395.06.79 7.266-55.52h.004z"></path>
+                    <path fill="#EEE" d="M42.777 105.33l392.04-.75 49.97 14-393.08 1.48-48.933-14.73h.003z"></path>
+                    <path fill="#EEE" d="M66.073 184.34l393.85-.81 18.5 5.32-399.29.77-13.057-5.28h-.003z"></path>
+                    <path fill="#fff" d="M42.579 105.3l-1.358 14.97 18.553 5.21-5.016 55.29-18.552-5.22-1.358 14.97 50.01 14.06 1.358-14.97-18.521-5.21 5.016-55.28 18.521 5.2 1.358-14.96-50.011-14.06z"></path>
+                    <path fill="#fff" d="M92.563 119.39l392.29-.79-1.34 14.93-392.29.94 1.343-15.08h-.003z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear2" x1="0" x2="1" y1="0" y2="0" gradientTransform="scale(642.36) rotate(.209 -69.092 36.196)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="#111"></stop>
+            <stop offset="1" stopColor="#B6B6B6"></stop>
+        </linearGradient>
+    </defs>
+</svg>

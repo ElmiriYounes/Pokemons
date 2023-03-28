@@ -1,5 +1,6 @@
 import { Theme } from "@emotion/react";
 import { createTheme } from "@mui/material";
+import { globalTypography } from "../globalStyle";
 
 export const darkTheme: Theme = createTheme({
   palette: {
@@ -9,11 +10,6 @@ export const darkTheme: Theme = createTheme({
     body1: {
       color: "#fff",
     },
-    h1: { color: "#1976D2", fontWeight: 600 },
-    fontFamily: `"Roboto", sans-serif`,
-    fontSize: 18,
-    fontWeightLight: 300,
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
+    ...globalTypography,
   },
 });

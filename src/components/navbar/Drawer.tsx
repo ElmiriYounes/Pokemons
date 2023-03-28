@@ -13,6 +13,7 @@ import {
 import { navItems } from "../../datas/navbar";
 import { MaterialUISwitch } from "./Navbar.styles";
 import { INavbar } from "../../interfaces/navbar.interfaces";
+import { Link } from "react-router-dom";
 
 const Drawer: FC<INavbar> = (props) => {
   const theme = useTheme();
@@ -33,7 +34,7 @@ const Drawer: FC<INavbar> = (props) => {
         }}
       >
         <Divider />
-        <List>
+        <List sx={{ "& a": { width: "100%" } }}>
           {navItems.map((item, index) => (
             <ListItem
               key={index}
@@ -41,12 +42,22 @@ const Drawer: FC<INavbar> = (props) => {
               onClick={props.handleToggle}
               alignItems="center"
             >
-              <ListItemButton sx={{ textAlign: "center", color: "#1976D2" }}>
-                <ListItemText
-                  primary={item.label}
-                  sx={{ textAlign: "center", color: "#1976D2" }}
-                />
-              </ListItemButton>
+              <Link key={index} to={item.path}>
+                <ListItemButton
+                  sx={{
+                    textAlign: "center",
+                    color: "#1976D2",
+                  }}
+                >
+                  <ListItemText
+                    primary={item.label}
+                    sx={{
+                      textAlign: "center",
+                      color: "#1976D2",
+                    }}
+                  />
+                </ListItemButton>
+              </Link>
             </ListItem>
           ))}
           <ListItem

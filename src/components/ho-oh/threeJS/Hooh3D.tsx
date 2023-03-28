@@ -6,16 +6,18 @@ source: https://sketchfab.com/3d-models/my-animated-ho-oh-62ad7114edb9446cb3848b
 title: my animated ho-oh
 */
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, FC } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { AnimationClip, Material, Mesh, Object3D } from "three";
 
-export function Hooh3D(props: any) {
-  const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/hooh.glb");
+export const Hooh3D: FC = (props: any) => {
+  const group = useRef<Mesh>(null!);
+
+  const { nodes, materials, animations }: any = useGLTF("/hooh.glb");
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    actions["Take 001"].play();
+    actions["Take 001"]!.play();
   }, []);
 
   return (
@@ -24,7 +26,7 @@ export function Hooh3D(props: any) {
       {...props}
       dispose={null}
       position={[0, -0.3, 0]}
-      scale={[0.02, 0.02, 0.02]}
+      scale={[0.017, 0.017, 0.017]}
     >
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, -0.5]}>
@@ -86,6 +88,6 @@ export function Hooh3D(props: any) {
       </group>
     </group>
   );
-}
+};
 
 useGLTF.preload("/hooh.glb");

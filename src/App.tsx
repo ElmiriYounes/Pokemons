@@ -1,11 +1,15 @@
-import { CssBaseline, GlobalStyles, ThemeProvider } from "@mui/material";
-import { FC, useState, useEffect } from "react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { FC, useEffect, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import { GlobalStyle } from "./globalStyle";
-
-import Home from "./pages/home/Home";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import HomePage from "./pages/home/HomePage";
 import { darkTheme } from "./themes/darkTheme";
 import { lightTheme } from "./themes/lightTheme";
+import PokemonsPage from "./pages/pokemons/PokemonsPage";
+import PageNotFound from "./components/errors/PageNotFound";
 
 const App: FC = () => {
   const [mode, setMode] = useState<string>("light");
@@ -14,18 +18,27 @@ const App: FC = () => {
     mode === "light" ? setMode((m) => "dark") : setMode((m) => "light");
   };
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <>
-      <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
-        <CssBaseline />
+    <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
+      <CssBaseline />
 
-        {GlobalStyle}
+      {GlobalStyle}
 
+      <Router>
         <Navbar toggleMode={toggleMode} />
 
-        <Home />
-      </ThemeProvider>
-    </>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pokemons" element={<PokemonsPage />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 };
 

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5" clipRule="evenodd" viewBox="0 0 142 191">
+    <g transform="translate(-109.349 -9.35)">
+        <g>
+            <path fill="#fff" stroke="#000" strokeWidth="1.82" d="M236.275 105.006c6.174-8.196 9.425-17.493 9.425-26.957 0-29.757-31.522-53.915-70.347-53.915-38.825 0-70.347 24.158-70.347 53.915 0 9.464 3.251 18.761 9.425 26.957h121.844z" transform="rotate(-180 175.409 133.532) matrix(.71158 0 0 .92168 25.603 45.15)"></path>
+            <ellipse cx="148.139" cy="109.902" fill="#fff" stroke="#000" strokeWidth="1.36" rx="14.377" ry="12.341" transform="rotate(-180 175.409 133.532) matrix(1.0433 0 0 1.16685 -4.392 -23.577)"></ellipse>
+            <ellipse cx="252.118" cy="132.03" fill="#EBEBEB" stroke="#000" strokeWidth="1.39" rx="57.766" ry="19.959" transform="rotate(-180 175.409 133.532) matrix(.86276 0 0 1.25726 -67.356 -36.24)"></ellipse>
+        </g>
+        <g>
+            <path fill="#F3184E" stroke="#000" strokeWidth="1.82" d="M236.275 105.006c6.174-8.196 9.425-17.493 9.425-26.957 0-29.757-31.522-53.915-70.347-53.915-38.825 0-70.347 24.158-70.347 53.915 0 9.464 3.251 18.761 9.425 26.957h121.844z" transform="rotate(-70 114.44 81.738) matrix(.71158 0 0 .92168 25.603 45.15)"></path>
+            <ellipse cx="252.118" cy="132.03" fill="#EBEBEB" stroke="#000" strokeWidth="1.39" rx="57.766" ry="19.959" transform="rotate(-70 114.44 81.738) matrix(.86276 0 0 1.25726 -67.356 -36.24)"></ellipse>
+            <ellipse cx="148.139" cy="109.902" fill="#fff" stroke="#000" strokeWidth="1.36" rx="14.377" ry="12.341" transform="rotate(-70 114.44 81.738) matrix(1.0433 0 0 1.16685 -4.392 -23.577)"></ellipse>
+            <ellipse cx="148.139" cy="109.902" fill="#F3184E" stroke="#000" strokeWidth="2.71" rx="14.377" ry="12.341" transform="rotate(-70 114.44 81.738) matrix(.52165 0 0 .58343 72.885 40.543)"></ellipse>
+        </g>
+    </g>
+</svg>
