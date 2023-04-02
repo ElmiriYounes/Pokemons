@@ -1,6 +1,6 @@
 import { INavItems } from "../interfaces/navbar.interfaces";
 
-export const pathname: string = "/";
+export const pathname: string = "/Pokemons/";
 
 export const navItems: INavItems[] = [
   {

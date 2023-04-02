@@ -1,5 +1,6 @@
 {
   "name": "pokemon",
+  "homepage": "https://elmiriyounes.github.io/Pokemons",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
