@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Pokemons/static/css/main.fc0706bd.css",
-    "main.js": "/Pokemons/static/js/main.6fbf92fd.js",
+    "main.js": "/Pokemons/static/js/main.84eee8df.js",
     "static/js/787.ab378faf.chunk.js": "/Pokemons/static/js/787.ab378faf.chunk.js",
     "static/media/grass_two.svg": "/Pokemons/static/media/grass_two.dfbccef30eb3a16d00cab884e23b2be7.svg",
     "static/media/logo_pokemon.png": "/Pokemons/static/media/logo_pokemon.4327774bfef3b721bcec.png",
@@ -25,11 +25,11 @@
     "static/media/electric.svg": "/Pokemons/static/media/electric.56b80fdc85ffc99a7f1d9024c58c4a68.svg",
     "static/media/normal.svg": "/Pokemons/static/media/normal.fd909eab3d380c9c7f372745c19c3d4e.svg",
     "main.fc0706bd.css.map": "/Pokemons/static/css/main.fc0706bd.css.map",
-    "main.6fbf92fd.js.map": "/Pokemons/static/js/main.6fbf92fd.js.map",
+    "main.84eee8df.js.map": "/Pokemons/static/js/main.84eee8df.js.map",
     "787.ab378faf.chunk.js.map": "/Pokemons/static/js/787.ab378faf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc0706bd.css",
-    "static/js/main.6fbf92fd.js"
+    "static/js/main.84eee8df.js"
   ]
 }
