@@ -91,4 +91,4 @@ export const Hooh3D: FC = (props: any) => {
   );
 };
 
-useGLTF.preload("/hooh.glb");
+useGLTF.preload(`${pathname}hooh.glb`);

@@ -117,7 +117,7 @@ export const ModalPokemon = motion(styled(Box)`
   right: 0;
   bottom: 0;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   overflow: auto;
   padding: 50px 0;
 
